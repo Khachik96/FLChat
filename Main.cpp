@@ -1,22 +1,16 @@
-#include "List_.h"
-#include<iostream>
+#include"List_.h"
+
 int main()
 {
-	int m = 0;
-	int b = 0;
-	List_ ob;
-	node* el;
-	ob.init(el, 2, 7);
-	ob.print_(el);
-	m = ob.length(el);
-	b = ob.size_(el);
-	std::cout << "\n\nm="<<m<<"\nb="<<b<<"\n";
-	ob.push_back_(el, -58);
-	ob.insert_(el, 11,5);
-	ob.print_(el);
-	m = ob.length(el);
-	b = ob.size_(el);
-	std::cout << "\n\nm="<<m<<"\nb="<<b<<"\n";
-
+	List_<int> ob(5,2);
+	ob.push_back_(4);
+	ob.push_back_(-7);
+	ob.push_front_(-36);
+	ob.print_();
+	std::cout << "########\n";
+	//ob.del(0, 6);
+	List_<int> p;
+	p=ob.reverse();
+	p.print_();
 	system("pause");
 }
